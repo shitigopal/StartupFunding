@@ -16,7 +16,7 @@ const Signin = () => {
     onSubmit: async (values) => {
 
      
-      const response = await fetch(url+'/user/add', {
+      const response = await fetch(url+'/user/auth', {
       method: 'POST',
       body : JSON.stringify(values),
       headers : {
@@ -32,8 +32,9 @@ const Signin = () => {
       Swal.fire({
         icon : "success",
         title : "Nice🎉",
-        text : "You are registered"
+        text : "logged in successfully"
       })
+      
     }else{
       Swal.fire({
         icon : "error",
@@ -57,9 +58,12 @@ const Signin = () => {
           />
         </div>
         <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             {/* Email input */}
-            <div className="form-outline mb-4">
+            <div className=" mb-4">
+              <label className="form-label" htmlFor="form1Example13">
+                Email address
+              </label>
               <input
                 type="email"
                 id="email"
@@ -67,12 +71,12 @@ const Signin = () => {
                 value={formik.values.email}
                 className="form-control form-control-lg"
               />
-              <label className="form-label" htmlFor="form1Example13">
-                Email address
-              </label>
             </div>
             {/* Password input */}
-            <div className="form-outline mb-4">
+            <div className=" mb-4">
+              <label className="form-label" htmlFor="form1Example23">
+                Password
+              </label>
               <input
                 type="password"
                 id="password"
@@ -80,9 +84,6 @@ const Signin = () => {
                 value={formik.values.password}
                 className="form-control form-control-lg"
               />
-              <label className="form-label" htmlFor="form1Example23">
-                Password
-              </label>
             </div>
             <div className="d-flex justify-content-around align-items-center mb-4">
               {/* Checkbox */}
@@ -102,7 +103,7 @@ const Signin = () => {
               <a href="#!">Forgot password?</a>
             </div>
             {/* Submit button */}
-            <button type="submit" className="btn btn-primary btn-lg btn-block">
+            <button type="submit" className="btn btn-dark btn-lg btn-block">
               Sign in
             </button>
             <div className="divider d-flex align-items-center my-4">
