@@ -54,7 +54,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="btn btn-outline-white" to="/main/login">
+              <NavLink className="btn btn-outline-white" to="/main/signin">
                 Signin
               </NavLink>
             </li>
