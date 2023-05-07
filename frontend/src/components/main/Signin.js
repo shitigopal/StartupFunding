@@ -5,7 +5,7 @@ import app_config from '../../config';
 import "./login.css"
 
 
-const Signin = () => {
+const StartupSignin = () => {
   const url = app_config.apiurl;
 
   const formik = useFormik({
@@ -136,4 +136,4 @@ const Signin = () => {
 }
 
 
-export default Signin;
+export default StartupSignin;

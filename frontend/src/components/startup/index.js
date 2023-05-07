@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const User = () => {
+const Startup = () => {
   return (
     <div className="module">
       <Header />
@@ -13,4 +13,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default Startup;

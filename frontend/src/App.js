@@ -6,14 +6,16 @@ import Signin from "./components/main/Signin";
 import Signup from "./components/main/Signup";
 import Home from "./components/main/Home";
 import UserAuth from "./auth/UserAuth";
-import User from "./components/user";
-import UserProfile from "./components/user/UserProfile";
+import User from "./components/startup";
+import UserProfile from "./components/startup/UserProfile";
 import AdminProfile from "./components/admin/AdminProfile";
 import NotFound from "./components/NotFound";
 import AdminAuth from "./auth/AdminAuth";
 import UserProvider from "./context/UserProvider";
 import AdminProvider from "./context/AdminProvider";
 import { useState } from "react";
+import Startup from "./components/startup";
+import StartupListing from "./components/main/StartupListing";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(
@@ -51,10 +53,11 @@ function App() {
               element={
                 // <UserAuth>
                 // </UserAuth>
-                <User />
+                <Startup />
               }
-              path="user"
+              path="startup"
             >
+              <Route path="browse" element={<StartupListing />} />
               <Route path="profile" element={<UserProfile />} />
             </Route>
             <Route path="*" element={<NotFound />} />

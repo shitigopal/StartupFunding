@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import app_config from "../../config";
 import Swal from "sweetalert2";
 
-const Signup = () => {
+const StartupSignup = () => {
 
   const addStartupEntry = async (id) => {
     const response = await fetch(url+'/startup/add', {
@@ -260,4 +260,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default StartupSignup;
