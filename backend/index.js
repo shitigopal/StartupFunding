@@ -2,7 +2,6 @@ const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const userRouter = require('./routers/userRouter');
 const startupRouter = require('./routers/startupRouter');
 const cors = require('cors');
 const { PORT } = require('./config');
@@ -16,8 +15,6 @@ app.use(cors(
     }
 ));
 app.use(express.json());
-// app.use(express.urlencoded({extended : true}));
-app.use('/user', userRouter);
 app.use('/startup', startupRouter);
 
 
