@@ -3,9 +3,9 @@ import React from "react";
 const Home = () => {
   return (
     <div id="preview" className="preview">
-      <div style={{ display: "none" }} />
-      <div>
-        <div
+      <div style={{ display: "none" }} ></div>
+      <div
+
           data-draggable="true"
           className=""
           style={{ position: "relative" }}
@@ -70,15 +70,34 @@ const Home = () => {
                       aria-controls="#picker-editor"
                     />
                   </div>
+                  
                 </div>
               </div>
+              
             </section>
+            <div className="homepage">
+                    <h2> why it is so great?</h2>
+                   
+  //   // return (
+  //     <div>
+  //       {/* Hello world */}
+  //       <div className="awesome" style={{border: '1px solid red'}}>
+  //         <label htmlFor="name">Enter your name: </label>
+  //         <input type="text" id="name" />
+  //       </div>
+  //       <p>Enter your HTML here</p>
+  //     </div>
+  //   );
+  {/* // } */}
+
+                  </div>
           </section>
+          
           {/**/}
         </div>
       </div>
     </div>
-    </div>
+
   
   );
 };

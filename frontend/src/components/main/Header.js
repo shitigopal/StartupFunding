@@ -23,7 +23,7 @@ const Header = () => {
           {/* Navbar brand */}
           <a className="navbar-brand mt-2 mt-lg-0" href="#">
             <img
-              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+              src="/logo.png"
               height={15}
               alt="MDB Logo"
               loading="lazy"

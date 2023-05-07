@@ -47,7 +47,7 @@ const Signin = () => {
 
 
   return (
-    <section className="vh-100">
+    <section className="vh-100 signin-page" >
     <div className="container py-5 h-100">
       <div className="row d-flex align-items-center justify-content-center h-100">
         <div className="col-md-8 col-lg-7 col-xl-6">
