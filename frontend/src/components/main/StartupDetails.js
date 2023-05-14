@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import app_config from "../../config";
-import subscriptionData from "../../subscriptionDetails";
 
 const StartupDetails = () => {
   const { id } = useParams();
@@ -93,14 +92,6 @@ const StartupDetails = () => {
     ))
   }
 
-  const openChat = () => {
-    if (currentInvestor) {
-      checkVisiblity('chat', '/investor/chat/' + startupData._id)
-    }
-    else if (currentUser) {
-      checkVisiblity('chat', '/startup/chat/' + startupData._id)
-    }
-  }
 
   const getSubscriptionData = async (id) => {
     const res = await fetch(url + '/Subscription/getbyuser/' + id);
@@ -111,14 +102,7 @@ const StartupDetails = () => {
     }
   }
 
-  const checkVisiblity = (feature, path) => {
-    if (!planDetails) {
-      Swal.fire({ title: 'You need to subscribe!!' })
-      return
-    }
-    if (subscriptionData[planDetails.data.plan.name].includes(feature)) { navigate(path) }
-    else Swal.fire({ title: 'Please upgrade your plan!!' })
-  }
+ 
 
   const displayDetails = () => {
     if (!loading && startupData) {
@@ -199,10 +183,6 @@ const StartupDetails = () => {
           </div>
         </div>
 
-
-        <center>
-          <button className="btn m-5" style={{ backgroundColor: "#9c3353", color: "white", width: "fit-content" }} onClick={openChat}>Start Chatting</button>
-        </center>
         <hr />
         <div style={{ backgroundColor: "#f0efef" }}>
           <h2 className="text-center pt-5">Write your reviews</h2>

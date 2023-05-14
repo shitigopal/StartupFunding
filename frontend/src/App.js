@@ -18,6 +18,7 @@ import StartupSignin from "./components/main/StartupSignin";
 import StartupSignup from "./components/main/StartupSignup";
 import Contact from "./components/main/Contact";
 import About from "./components/main/About";
+import StartupDetails from "./components/main/StartupDetails";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(
@@ -51,7 +52,7 @@ function App() {
               <Route element={<Contact />} path="Contact" />
               <Route element={<StartupSignin />} path="startupsignin" />
               <Route element={<StartupSignup />} path="startupsignup" />
-              <Route element={<Startup Details />}path="startupdetails" />
+              <Route element={<StartupDetails />}path="startupdetails/:id" />
               <Route element={<StartupListing />}path="startuplisting" />
 
             </Route>
