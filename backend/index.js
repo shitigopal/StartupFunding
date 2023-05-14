@@ -5,6 +5,7 @@ dotenv.config();
 const startupRouter = require('./routers/startupRouter');
 const productRouter = require('./routers/productRouter');
 const investorRouter= require('./routers/investorRouter');
+const feedbackRouter= require('./routers/feedbackRouter');
 const utilRouter= require('./routers/util');
 
 const cors = require('cors');
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use('/startup', startupRouter);
 app.use('/product', productRouter);
 app.use('/investor',investorRouter);
+app.use('/feedback',feedbackRouter);
 app.use('/util',utilRouter);
 
 
