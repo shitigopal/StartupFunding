@@ -80,4 +80,30 @@ router.delete("/delete/:id", (req, res) => {
     });
 });
 
+router.post("/auth", (req, res) => {
+  Model.findOne({ email: req.body.email })
+    .then((result) => {
+      if (result) {
+        res.status(201).json({ status: "success", result });
+        
+      } else {
+        console.error("Error authenticating user");
+        res.status(401).json({status: "failed"});
+      }
+    })
+    .catch((err) => {
+      console.error("Error authenticating user", err);
+      res.status(502).json({status: "failed"});
+    });
+
+  // .then((result) => {
+  //   console.log("User Data Saved");
+  //   res.status(201).json({ status: "success", result });
+  // })
+  // .catch((err) => {
+  //   console.error("Error saving user data", err);
+  //   res.status(500).send("Error saving user data");
+  // });
+});
+
 module.exports = router;

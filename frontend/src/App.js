@@ -2,12 +2,10 @@ import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Admin from "./components/admin";
 import Main from "./components/main";
-import Signin from "./components/main/Signin";
-import Signup from "./components/main/Signup";
 import Home from "./components/main/Home";
 import UserAuth from "./auth/UserAuth";
 import User from "./components/startup";
-import UserProfile from "./components/startup/UserProfile";
+import UserProfile from "./components/startup/StartupProfile";
 import AdminProfile from "./components/admin/AdminProfile";
 import NotFound from "./components/NotFound";
 import AdminAuth from "./auth/AdminAuth";
@@ -16,6 +14,8 @@ import AdminProvider from "./context/AdminProvider";
 import { useState } from "react";
 import Startup from "./components/startup";
 import StartupListing from "./components/main/StartupListing";
+import StartupSignin from "./components/main/StartupSignin";
+import StartupSignup from "./components/main/StartupSignup";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(
@@ -45,8 +45,8 @@ function App() {
 
             <Route element={<Main />} path="main">
               <Route element={<Home />} path="home" />
-              <Route element={<Signin />} path="signin" />
-              <Route element={<Signup />} path="signup" />
+              <Route element={<StartupSignin />} path="startupsignin" />
+              <Route element={<StartupSignup />} path="startupsignup" />
             </Route>
 
             <Route

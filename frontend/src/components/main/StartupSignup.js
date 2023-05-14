@@ -59,7 +59,7 @@ const StartupSignup = () => {
       }
       console.log(role);
       // return;
-      const response = await fetch(url+'/user/add', {
+      const response = await fetch(url+'/startup/add', {
       method: 'POST',
       body : JSON.stringify(values),
       headers : {

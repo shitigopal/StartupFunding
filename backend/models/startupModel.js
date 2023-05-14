@@ -5,6 +5,8 @@ const SALT = 10;
 const userSchema = new Schema({
   name: String,
   nature: String,
+  email: String,
+  password: String,
   industry: String,
   sector: String,
   inCorpNum: String,
