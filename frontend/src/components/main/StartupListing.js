@@ -4,7 +4,6 @@ import app_config from "../../config";
 
 const StartupListing = () => {
   const [startupList, setStartupList] = useState([]);
-  
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem(null)));
   const [searchKeyword, setSearchKeyword] = useState("");
 
@@ -49,7 +48,7 @@ const StartupListing = () => {
     const res = await fetch(url + "/startup/getall");
     const data = await res.json();
     console.log(data);
-    setStartupList(data.result.filter((user) => user.role === "startup"));
+    setStartupList(data.result);
     // setStartupList(data.result);
   };
 
