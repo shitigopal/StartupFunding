@@ -34,16 +34,16 @@ const StartupDetails = () => {
 
   useEffect(() => {
     fetchStartupById();
-    if(currentInvestor){
+    if (currentInvestor) {
       getSubscriptionData(currentInvestor._id);
-    }else{
+    } else {
       getSubscriptionData(currentUser._id);
 
     }
   }, []);
 
   const feedbackSubmit = async (formdata, { setSubmitting }) => {
-    let loggedinUser = currentUser !== null ? currentUser:currentInvestor;
+    let loggedinUser = currentUser !== null ? currentUser : currentInvestor;
     if (!loggedinUser) {
       Swal.fire({
         icon: 'error',
@@ -57,7 +57,7 @@ const StartupDetails = () => {
     formdata.rating = rating;
     formdata.created_at = new Date();
     setSubmitting(true);
-    const res = await fetch(url+`/feedback/add`, {
+    const res = await fetch(url + `/feedback/add`, {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: { "Content-Type": "application/json" },
@@ -94,11 +94,11 @@ const StartupDetails = () => {
   }
 
   const openChat = () => {
-    if(currentInvestor){
-        checkVisiblity('chat', '/investor/chat/' + startupData._id)
+    if (currentInvestor) {
+      checkVisiblity('chat', '/investor/chat/' + startupData._id)
     }
-    else if(currentUser){
-        checkVisiblity('chat', '/startup/chat/' + startupData._id)   
+    else if (currentUser) {
+      checkVisiblity('chat', '/startup/chat/' + startupData._id)
     }
   }
 
@@ -112,8 +112,8 @@ const StartupDetails = () => {
   }
 
   const checkVisiblity = (feature, path) => {
-    if(!planDetails){
-      Swal.fire({title : 'You need to subscribe!!'})
+    if (!planDetails) {
+      Swal.fire({ title: 'You need to subscribe!!' })
       return
     }
     if (subscriptionData[planDetails.data.plan.name].includes(feature)) { navigate(path) }
@@ -130,7 +130,7 @@ const StartupDetails = () => {
         <div className="row justify-content-center">
           <img
             className="rounded-circle shadow-1-strong mb-4"
-            src={url+'/'+startupData.startupimage} 
+            src={url + '/' + startupData.startupimage}
             alt="avatar"
             style={{ width: 150, color: "" }}
           />
@@ -158,7 +158,7 @@ const StartupDetails = () => {
             <div className="me-5">
               <img
                 className="mx-auto"
-                src={url+'/'+startupData.owneravatar} 
+                src={url + '/' + startupData.owneravatar}
                 alt=""
                 style={{ width: "100px", borderRadius: "10px" }}
               />
@@ -191,9 +191,9 @@ const StartupDetails = () => {
             <div>
               <h5>{startupData.productname}</h5>
               <p>
-              
-              {startupData.productdescription}
-                
+
+                {startupData.productdescription}
+
               </p>
             </div>
           </div>
@@ -244,21 +244,13 @@ const StartupDetails = () => {
                     <div className="col-md-2">
                       <button className="btn " style={{ backgroundColor: "#9c3353", color: "white" }}>Submit</button>
                     </div>
-
                   </div>
-
-
-
-
-
                 </form>
               )}
             </Formik>
-
           </div>
         </div>
         {displayFeedbacks()}
-
       </div>
 
 
