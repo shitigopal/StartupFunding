@@ -16,7 +16,7 @@ const StartupSignin = () => {
     onSubmit: async (values) => {
 
      
-      const response = await fetch(url+'/user/auth', {
+      const response = await fetch(url+'/startup/auth', {
       method: 'POST',
       body : JSON.stringify(values),
       headers : {
