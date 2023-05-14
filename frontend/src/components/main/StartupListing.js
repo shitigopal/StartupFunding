@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import app_config from '../../config';
 
 const StartupListing = () => {
+
+  const {apiurl} = app_config;
+  const [startupList, setStartupList] = useState([]);
+
+  const getStartupsData = async () => {
+    const res = fetch(apiurl+'/')
+  }
 
   return (
     <section style={{ backgroundColor: "#eee" }}>
