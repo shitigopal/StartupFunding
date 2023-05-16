@@ -11,7 +11,7 @@ const UserProvider = ({children, currentUser}) => {
     const logout = () => {
         sessionStorage.removeItem('user');
         setLoggedIn(false);
-        navigate('/main/signin');
+        navigate('/main/startupsigin');
     }
 
     return <UserContext.Provider value={{loggedIn, setLoggedIn, logout}}>

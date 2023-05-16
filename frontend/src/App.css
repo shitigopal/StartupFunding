@@ -13,3 +13,9 @@
 .signin-page{
   background-color: rgb(238, 224, 255);
 }
+
+.bg-image{
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}

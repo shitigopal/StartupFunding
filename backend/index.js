@@ -26,6 +26,8 @@ app.use('/investor',investorRouter);
 app.use('/feedback',feedbackRouter);
 app.use('/util',utilRouter);
 
+app.use(express.static('./static/uploads'));
+
 
 app.get('/', (req, res) => {
     console.log('Request at index');

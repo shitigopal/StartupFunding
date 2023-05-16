@@ -4,6 +4,7 @@ const SALT = 10;
 
 const userSchema = new Schema({
   name: String,
+  startupName: String,
   nature: String,
   email: String,
   password: String,
@@ -14,8 +15,8 @@ const userSchema = new Schema({
   timeline: String,
   representative: {type : Types.ObjectId, ref: 'user'},
   funding: Number,
-  coverimage: String,
-  contact: Array,
+  logo: String,
+  contact: String,
   officeAddress: String,
   director: [{type : Types.ObjectId, ref: 'user'}],
   created_at: Date,

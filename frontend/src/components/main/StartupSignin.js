@@ -3,10 +3,30 @@ import React from 'react'
 import Swal from "sweetalert2";
 import app_config from '../../config';
 import "./login.css"
+import { useNavigate } from 'react-router-dom';
 
 
 const StartupSignin = () => {
+  
   const url = app_config.apiurl;
+  const navigate = useNavigate();
+
+  const fields = [
+    'name',
+  'nature',
+  'email',
+  'password',
+  'industry',
+  'sector',
+  'inCorpNum',
+  'description',
+  'timeline',
+  'funding',
+  'coverimage',
+  'contact',
+  'officeAddress',
+  'created_at'
+  ]
 
   const formik = useFormik({
     initialValues: {
@@ -33,7 +53,10 @@ const StartupSignin = () => {
         icon : "success",
         title : "Nice🎉",
         text : "logged in successfully"
-      })
+      });
+      const data = await response.json();
+      sessionStorage.setItem('startup', JSON.stringify(data.result));
+      navigate('/startup/profile');
       
     }else{
       Swal.fire({

@@ -64,7 +64,7 @@ function App() {
               }
               path="startup"
             >
-              <Route path="browse" element={<StartupListing />} />
+              {/* <Route path="browse" element={<StartupListing />} /> */}
               <Route path="profile" element={<UserProfile />} />
             </Route>
             <Route path="*" element={<NotFound />} />

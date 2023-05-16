@@ -65,7 +65,7 @@ const StartupListing = () => {
           <div className="col-md-4">
             <img
               className="img-fluid p-2"
-              src={startup.startupimage ? (url + "/" + startup.startupimage) : placeholder}
+              src={startup.logo ? (url + "/" + startup.logo) : placeholder}
               alt=""
               style={{maxHeight:"200px",width:"200px"}}
             />
@@ -74,8 +74,9 @@ const StartupListing = () => {
           <div className="col-md-6">
             <div className="card-body">
               <h4>
-                <strong> {startup.name} </strong>
+                <strong>{startup.startupName} </strong>
               </h4>
+              <p className="text-muted">Founded By :  {startup.name}</p>
               <p className="text-muted">{startup.email}</p>
               <Link
                 type="button"

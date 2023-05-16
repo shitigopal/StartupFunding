@@ -1,7 +1,50 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useUserContext } from "../../context/UserProvider";
 
 const Header = () => {
+
+  const {loggedIn, setLoggedIn, logout} = useUserContext();
+
+  const showLoggedIn = () => {
+    if (!loggedIn) {
+      return (
+        <>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/main/startupsignup">
+              Signup
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/main/startupsignin">
+              Login
+            </NavLink>
+          </li>
+        </>
+      );
+    }else{
+      return (
+        <>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/main/startuplisting">
+              Browse Startups
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/startup/profile">
+              View Profile
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <button onClick={logout} className="btn btn-danger">
+              Logout
+            </button>
+          </li>
+        </>
+      );
+    }
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       {/* Container wrapper */}
@@ -48,16 +91,7 @@ const Header = () => {
             </li>
           </ul>
           <ul className="navbar-nav mb-2 mb-lg-0">
-            <li className="nav-item me-2">
-              <NavLink className="btn btn-outline-white" to="/main/startupsignup">
-                Create Account
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="btn btn-outline-white" to="/main/startupsignin">
-                Signin
-              </NavLink>
-            </li>
+            {showLoggedIn()}
           </ul>
         </div>
       </div>
