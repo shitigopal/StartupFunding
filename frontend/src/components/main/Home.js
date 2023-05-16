@@ -35,8 +35,8 @@ const Home = () => {
                 <div className="col-lg-10">
                   <div className="text-white pb-5">
                     <h1 className="my-md-5 mb-4 px-5 display-3 fw-bold ls-tight">
-                      <span>Custom Browser Extension</span> <br />
-                      <span className="">for your needs</span>
+                      <span>Connecting startups, corporate brands, and</span> <br />
+                      <span className="">investors</span>
                     </h1>
                     <NavLink
                       className="btn btn-outline-light btn-lg btn-rounded py-3 px-5 mb-2 mb-md-0 me-md-2"
@@ -99,7 +99,7 @@ const Home = () => {
             />
           </div>
           <div className="col-md-6 mb-4 mb-md-0">
-            <h3 className="fw-bold">Art</h3>
+            <h3 className="fw-bold">Trend Analysis </h3>
             <div className="mb-2 text-danger small">
               <i
                 className="fas fa-money-bill me-2"
@@ -108,15 +108,10 @@ const Home = () => {
               <span>Business</span>
             </div>
             <p className="text-muted">
-              Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat
-              vulputate. Ut vulputate est non quam dignissim elementum. Donec a
-              ullamcorper diam.
+            Trend analysis is a technique used in technical analysis that attempts to predict future stock price movements based on recently observed trend data. Trend analysis uses historical data, such as price movements and trade volume, to forecast the long-term direction of market sentiment.
             </p>
             <p className="text-muted">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quae
-              nulla saepe rerum aspernatur odio amet perferendis tempora
-              mollitia? Ratione unde magni omnis quaerat blanditiis cumque
-              dolore placeat rem dignissimos?
+            Trend analysis tries to predict a trend, such as a bull market run, and ride that trend until data suggests a trend reversal, such as a bull-to-bear market. Trend analysis is helpful because moving with trends, and not against them, will lead to profit for an investor. It is based on the idea that what has happened in the past gives traders an idea of what will happen in the future. There are three main types of trends: short-, intermediate- and long-term.
             </p>
             <a
               className="btn btn-primary"
@@ -138,7 +133,7 @@ const Home = () => {
             />
           </div>
           <div className="col-md-6 mb-4 mb-md-0">
-            <h3 className="fw-bold">Exhibition in Paris</h3>
+            <h3 className="fw-bold">The Biggest Challenges Small Businesses Are Facing Right Now</h3>
             <div className="mb-2 text-primary small">
               <i
                 className="fas fa-money-bill me-2"
@@ -147,17 +142,7 @@ const Home = () => {
               <span>Art</span>
             </div>
             <p className="text-muted">
-              Duis sagittis, turpis in ullamcorper venenatis, ligula nibh porta
-              dui, sit amet rutrum enim massa in ante. Curabitur in justo at
-              lorem laoreet ultricies. Nunc ligula felis, sagittis eget nisi
-              vitae, sodales vestibulum purus. Vestibulum nibh ipsum, rhoncus
-              vel sagittis nec, placerat vel justo. Duis faucibus sapien eget
-              tortor finibus, a eleifend lectus dictum. Cras tempor convallis
-              magna id rhoncus. Suspendisse potenti. Nam mattis faucibus
-              imperdiet. Proin tempor lorem at neque tempus aliquet. Phasellus
-              at ex volutpat, varius arcu id, aliquam lectus. Vestibulum mattis
-              felis quis ex pharetra luctus. Etiam luctus sagittis massa, sed
-              iaculis est vehicula ut.
+            Inflation remains the number one concern for small businesses by far, with more than half (53%) of them saying inflation is the biggest challenge they face. Inflation topped the list of challenges for the entirety of 2022 and is up a whopping 30-percentage-points year-over-year.It doesn’t matter what size your small businesses or where it’s located: Inflation is the top concern for small businesses regardless of location, number of employees, or sector. Small businesses of every size have developed a number of strategies for dealing with inflation.
             </p>
             <a
               className="btn btn-primary"
