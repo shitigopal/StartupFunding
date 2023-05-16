@@ -52,9 +52,8 @@ function App() {
               <Route element={<Contact />} path="Contact" />
               <Route element={<StartupSignin />} path="startupsignin" />
               <Route element={<StartupSignup />} path="startupsignup" />
-              <Route element={<StartupDetails />}path="startupdetails/:id" />
-              <Route element={<StartupListing />}path="startuplisting" />
-
+              <Route element={<StartupDetails />} path="startupdetails/:id" />
+              <Route element={<StartupListing />} path="startuplisting" />
             </Route>
 
             <Route
