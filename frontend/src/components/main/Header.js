@@ -49,12 +49,12 @@ const Header = () => {
           </ul>
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item me-2">
-              <NavLink className="btn btn-outline-white" to="/main/signup">
+              <NavLink className="btn btn-outline-white" to="/main/startupsignup">
                 Create Account
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="btn btn-outline-white" to="/main/signin">
+              <NavLink className="btn btn-outline-white" to="/main/startupsignin">
                 Signin
               </NavLink>
             </li>
